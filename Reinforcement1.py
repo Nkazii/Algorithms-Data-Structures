@@ -3,7 +3,7 @@
 #integer i, and False otherwise
 def is_multiple(n, m):
     return n % m == 0
-#print(is_multiple(10, 5))
+
 
 
 #R1.2 Write a short Python function, is even(k), that takes an integer value and
@@ -12,7 +12,7 @@ def is_multiple(n, m):
 #I used the internet but the whole point was to use bitwise operators
 def is_even(k:int):
     return (k & 1 == 0)
-#print(is_even(8))
+
 
 #R1.3 Write a short Python function, minmax(data), that takes a sequence of
 #one or more numbers, and returns the smallest and largest numbers, in the
@@ -32,7 +32,7 @@ def minmax(data):
                 minm = x
     return minm, maxm
         
-#print(minmax([1, 2, 4, 8, 12, 7]))
+
 
 #R1.4 Write a short Python function that takes a positive integer n and returns
 #the sum of the squares of all the positive integers smaller than n.
@@ -43,14 +43,14 @@ def sumsqu(n: int):
         total += i ** 2
     return total
 
-#print(sumsqu(5))
+
 
 #R1.5 Give a single command that computes the sum from Exercise R-1.4, relying
 #on Python’s comprehension syntax and the built-in sum function.
 def sumsqu1(n: int):
     total = sum(i**2 for i in range(1, n))
     return total
-#print(sumsqu1(5))
+
 
 #R1.6 Write a short Python function that takes a positive integer n and returns
 #the sum of the squares of all the odd positive integers smaller than n.
@@ -60,7 +60,7 @@ def sumsqu2(n: int):
         if i & 1 == 1:
             total += i ** 2
     return total
-#print(sumsqu2(10))
+
 
 #R1.7 Give a single command that computes the sum from Exercise R-1.6, relying
 #on Python’s comprehension syntax and the built-in sum function.
@@ -68,7 +68,7 @@ def sumsqu3(n: int):
     total = sum(i ** 2 for i in range(1, n) if i & 1 == 1)
     return total
 
-#print(sumsqu3(10))
+
 
 #R1.8 Python allows negative integers to be used as indices into a sequence,
 #such as a string. If string s has length n, and expression s[k] is used for index
@@ -91,7 +91,7 @@ def sumsqu3(n: int):
 #the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
 
 complist = [2 ** i for i in range(0, 9)]
-#print(complist)
+
 
 #R1.12 Python’s random module includes a function choice(data) that returns a
 #random element from a non-empty sequence. The random module includes
@@ -106,4 +106,3 @@ def mychoice(data):
     n = random.randrange(0, len(data))
     return data[n]
 
-# print(mychoice(exdata1))
